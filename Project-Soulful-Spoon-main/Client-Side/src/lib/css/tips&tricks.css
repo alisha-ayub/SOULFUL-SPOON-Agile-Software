@@ -1,0 +1,381 @@
+/**** Navbar Styling ****/
+html, body{
+  font-family: sans-serif;
+  height: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: 0;
+  z-index: 10;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;    
+  margin-right: 1rem;
+}
+
+.site {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: darkolivegreen;
+}
+
+/**** nav buttons ****/
+.nav-buttons {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-buttons li {
+  list-style: none;
+  position: relative;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  color: darkolivegreen;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.nav-buttons a:hover {
+  color: navy;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Add Button */
+.add-button {
+  background-color: darkolivegreen;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+.add-button:hover {
+  background-color: navy;
+}
+
+.profile-icon {
+  height: 55px;
+  width: 55px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: darkolivegreen;
+  padding: 0.5rem;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: white;
+  left: 0;
+  opacity: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  border-radius: 4px;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  top: 100%;
+  z-index: 20;
+  min-width: 200px;
+}
+
+.dropdown-content li {
+  padding: 0.5rem 0;
+}
+
+.dropdown-content li a {
+  text-decoration: none;
+  color: darkolivegreen;
+  display: block;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-content li a:hover  {
+  color: darkolivegreen;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+} 
+
+
+
+/* profile dropdown */
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profile-icon:hover .profile-icon {
+  transform: scale(1.1);
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+.profile-dropdown:hover .dropdown-menu, .dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  text-align: center;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 8px;
+  transition: background-color 0.5s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: darkolivegreen;
+  color: white;
+}
+
+.profile-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* video */
+.video-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.video-container h2 {
+  color: darkolivegreen;
+  margin-bottom: 1.5rem;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.video-wrapper iframe {
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+
+/* footer styling */
+
+.footer {
+  background-color: darkolivegreen;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  bottom: 0;
+  position: relative;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 1rem;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 1rem;
+  height: auto;
+}
+
+.footer-about {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: navy;
+}
+
+/* social icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.social-link img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* kitchen tools */
+.kitchen-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.kitchen-section h2 {
+ color: darkolivegreen;
+}
+
+.kitchen-tools {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.kitchen-tool {
+  width: 300px;
+  text-align: center;
+}
+
+.kitchen-tool {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.kitchen-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+.read-more-button {
+  background-color: darkolivegreen;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  max-width: 400px;
+}
+.read-more-button:hover {
+  background-color: navy;
+}
+
+.read-more-content {
+  margin-top: 1rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+}

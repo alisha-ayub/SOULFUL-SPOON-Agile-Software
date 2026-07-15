@@ -1,0 +1,104 @@
+/**** Navbar Styling ****/
+html, body{
+    font-family: sans-serif;
+    height: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;    
+    margin-right: 1rem;
+  }
+  
+  .site {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: darkolivegreen;
+  }
+
+  
+  /**** nav buttons ****/
+  .nav-buttons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-buttons li {
+    list-style: none;
+    position: relative;
+  }
+  
+  .nav-buttons a {
+    text-decoration: none;
+    color: darkolivegreen;
+    font-weight: normal;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-buttons a:hover {
+    color: navy;
+  }
+  
+  .action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* Add Button */
+  .add-button {
+    background-color: darkolivegreen;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+  }
+
+  .add-button:hover {
+    background-color: navy;
+  }
+
+  .profile-icon {
+    height: 55px;
+    width: 55px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+  }
+
+  .profile-icon:hover {
+    transform: scale(1.1);
+  }
+   

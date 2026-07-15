@@ -1,0 +1,718 @@
+body{
+    font-family: sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 0;
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;    
+    margin-right: 1rem;
+}
+
+.site {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: darkolivegreen;
+}
+
+/**** nav buttons ****/
+.nav-buttons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-buttons li {
+    list-style: none;
+    position: relative;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: darkolivegreen;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.nav-buttons a:hover {
+    color: navy;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Add Button */
+.add-button {
+    background-color: darkolivegreen;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: navy;
+}
+
+.profile-icon {
+    height: 55px;
+    width: 55px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+/* main */
+main {
+    padding: 1rem;
+    text-align: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: darkolivegreen;
+    padding: 0.5rem;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: white;
+    left: 0;
+    opacity: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    border-radius: 4px;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    top: 100%;
+    z-index: 20;
+    min-width: 200px;
+}
+
+.dropdown-content li {
+    padding: 0.5rem 0;
+}
+
+.dropdown-content li a {
+    text-decoration: none;
+    color: darkolivegreen;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content li a:hover  {
+    color: darkolivegreen;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+} 
+
+.page-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    /* margin: auto; */
+    
+}
+
+.content{
+    flex-grow: 1;
+    max-width: 750px;
+}
+
+
+#recipe-container{
+    max-width: 750px;
+    border-radius: 8px;
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 15px;
+    /* margin: auto; */
+    background: #ecfdea54;
+}
+
+.recipe-header h1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe-meta{
+    /* display: flex; */
+    gap: 15px;
+    /* font-size: 14px; */
+    color: darkolivegreen;
+}
+
+
+.recipe-image{
+    max-width: 100%;
+    /* max-height: 40%; */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.reaction-buttons{
+    display: flex;
+    gap: 10px;
+    /* margin-top: 10px; */
+    margin-bottom: 15px;
+}
+
+.reaction-buttons button{
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    font-size: 16px;
+    border-radius: 6px;
+    /* margin-right: 10px; */
+    cursor: pointer;
+    transition: background 0.2s;
+}
+/* 
+.icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+} */
+
+.reaction-buttons button:hover{
+    color: white;
+    background: darkolivegreen;
+}
+
+.reaction-buttons .userReacted{
+    color: white;
+    background: navy;
+    font-weight: bold;
+}
+
+@media print{
+    .navbar, .reaction-buttons, .print-button, .share-button, .share-container, .comments-section, .sidebar{
+        display: none;
+    }
+}
+
+.share-container{
+    /* margin-left: -30px; */
+    position: relative;
+    display: inline-block;
+}
+
+.share-button,
+.print-button{
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    background: #baf5b354; 
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 14px; 
+}
+
+.share-button:hover,
+.print-button:hover{
+    background: #5dec4e54; 
+}
+
+.share-options{
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: white;
+    top: 40px;
+    right: 0;
+    border-radius: 8px;
+    box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.share-options button{
+    border: none;
+    padding: 8px;
+    font-size: 12px;
+    /* display: flex;  */
+    /* align-items: center; */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.copy-link button{
+    margin-top: 8px;
+    background-color: darkolivegreen;
+    color: white;
+}
+
+.copy-link button:hover{
+    background-color: navy;
+}
+
+.whatsapp{
+    background-color:#25D366;
+    color: white;
+}
+
+.facebook{
+    background-color: #1877F2;
+    color: white;
+}
+
+.twitter{
+    background-color: black;
+    color: white;
+}
+.comments-section{
+    max-width: 750px;
+    border-radius: 10px;
+    /* box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    /* margin-top: 20px; */
+    margin-left: 15px;
+    /* margin: auto; */
+    /* background: #fcfcfc54; */
+}
+
+.comment-title{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.comment-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+textarea{
+    /* width: 100%; */
+    padding: 10px;
+    border: 1px solid #9d9d9d;
+    border-radius: 5px;
+}
+
+.comment-box button{
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkolivegreen;
+    color: white;
+    cursor: pointer;
+    font-size: 14px; 
+}
+
+.comment-box button:hover{
+    background-color: navy;
+}
+
+button:disabled{
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+button:disabled:hover{
+    background-color: gray;
+}
+
+.comments-list{
+    list-style: none;
+    padding: 0;
+}
+
+.comment{
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    background: #f9f9f9;
+}
+
+.comment-content{
+    flex-grow: 1;
+}
+
+.profile-picture{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reply-profile-picture{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comment-username{
+    font-weight: bold;
+    color: navy;
+}
+
+.comment-text{
+    margin: 5px 0;
+}
+
+.comment-date{
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.reply-button, 
+.delete-button{
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.reply-button:hover{
+    color: white;
+    background: darkolivegreen;
+}
+
+.delete-button:hover{
+    background-color: rgb(211, 72, 72);
+
+}
+
+.reply{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+    padding-left: 50px;
+}
+
+.reply-content{
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f1f1f1;
+    
+}
+
+.reply-box{
+   display: flex;
+   /* flex-direction: column; */
+   gap: 10px;
+   margin-top: 20px; 
+}
+
+.reply-box textarea{
+    width: 70%;
+    padding: 8px;
+}
+
+.reply-box button{
+    margin-top: 10px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.reply-box button:hover{
+    background-color: darkolivegreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.reply-box .cancel-reply:hover{
+    color: white;
+    background: black;
+}
+
+.view-more-replies{
+    margin-top: 15px;
+    margin-left: 100px;
+    border: none;
+    padding: 5px 8px;
+    background: darkolivegreen;
+    color: white;
+}
+
+.view-more-comments{
+    margin-top: 5px;
+    border: none;
+    padding: 5px 8px;
+    background: darkolivegreen;
+    color: white;
+}
+
+
+.view-more-replies:hover, 
+.view-more-comments:hover{
+    background: navy;
+}
+
+.sidebar{
+    width: 380px;
+    margin-top: 20px;
+    padding: 10px;
+    /* background: #fcfbfb; */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.latest-recipes-title{
+    border-bottom: 2px solid #ddd;
+    font-size: 18px;
+    text-align: center;  
+    color: rgb(255, 170, 0);
+}
+
+.liked-recipes-title{
+    border-bottom: 2px solid #ddd;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(247, 104, 104);
+}
+
+.latest-recipes.container,
+.liked-recipes-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.latest-recipe{
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.liked-recipe{
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f9f9f9;
+    margin-bottom: 5px;
+}
+
+
+.latest-recipe-image,
+.liked-recipe-image{
+    width: 100%;
+    /* display: block; */
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3 ease;
+}
+
+.latest-recipe-image:hover,
+.liked-recipe-image:hover{
+    transform: scale(1.05);
+}
+
+.latest-recipe-overlay, 
+.liked-recipe-overlay{
+    position: relative;
+    margin-bottom: -15px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.latest-recipe-name,
+.liked-recipe-name{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.latest-recipe-name:hover,
+.liked-recipe-name:hover{
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.newsletter{
+    /* border: 1px solid #152b01; */
+    background: rgb(220, 255, 220);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 30px;
+}
+
+.newsletter h2{
+    margin-top: 5px;
+    color: navy;
+}
+
+.newsletter-login-prompt{
+    font-weight: bold;
+    color: red;
+}
+
+
+.newsletter-description{
+    font-size: 14px;
+    color: grey;
+}
+
+.newsletter input[type="checkbox"]{
+    transform: scale(1.2);
+}
+
+.sucesss-message{
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+}
+
+.newsletter-message{
+    font-size: 16px;
+}
+
+.success-message{
+    font-size: 12px;
+    color: red;
+}
+
+/* footer styling */
+.footer {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .footer-column {
+    flex: 1;
+    padding: 1rem;
+    min-width: 250px;
+  }
+  
+  .footer-logo {
+    width: 100px;
+    margin-bottom: 1rem;
+    height: auto;
+  }
+  
+  .footer-about {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: navy;
+  }
+  
+  /* social icons */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .social-link img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 50%;
+  }
+  
+  .social-link img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }

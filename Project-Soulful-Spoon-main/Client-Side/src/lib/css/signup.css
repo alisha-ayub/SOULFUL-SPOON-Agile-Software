@@ -1,0 +1,246 @@
+/* general */
+body{
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+
+}
+
+/* signup container */
+#signup-container{
+    display: flex;
+    width: 880px;
+    height: 540px;
+    background: white;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    /* padding: 2rem;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+.signup-image{
+    width: 40%;
+    background: url('src/lib/components/images/signup-image.jpg') center/cover no-repeat;
+}
+
+
+/* close button section */
+.close-button{
+    top: 20px;
+    right: 10px;
+    font-size: 15px;
+    position: absolute;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.close-button:hover{
+    border: none;
+    background: rgb(254, 3, 3);
+    color: white;
+}
+
+
+/* join us now header */
+.signup-form h2{
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* signup form */
+.signup-form{
+    width: 55%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    /* overflow-y: auto; */
+}
+
+.form-columns{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+input{
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    background: white;
+}
+
+input:focus{
+    border-color: red;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 123, 84, 0.5)
+}
+
+/* signup form label */
+label{
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* full name */
+/* .name-field{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px
+}
+
+.name-field input{
+    flex: 1;
+} */
+
+/* profile picture */
+.profile-picture{
+    /* gap: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;    
+}
+
+.profile-picture-label{
+    font-weight: bold;
+    flex: 0 0 100px;
+    /* text-align: left; */
+    /* flex-wrap: nowrap; */
+}
+
+.profile-picture-image{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+
+.profile-picture img{
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    /* margin-top: 5px; */
+}
+
+.profile-picture input[type="file"]{
+    margin-top: 10px;
+    flex-grow: 1;
+    max-width: 250px;
+}
+
+.profile-picture button{
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 5px 10px;
+    cursor: pointer;
+    /* margin-left: 30px; */
+    /* white-space: nowrap; */
+    /* margin-top: 5px; */
+
+}
+
+.profile-picture button:hover{
+    background: #686868;
+}
+
+/* error messsage */
+/* p {
+    color: red;
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: -10px;
+} */
+
+/* signup button */
+#signup-button{
+    margin-top: 15px;
+    font-size: 14px;
+    width: 105%;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#signup-button:hover{
+    background: rgb(38, 104, 38);
+}
+
+/* social login section */
+/* social login section */
+.social-login{
+    font-size: 12px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.social-icons{
+    display: flex;
+    margin-top: 10px;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-icons button{
+    background: none;
+    border: none;
+}
+
+.social-icons img{
+    width: 30px;
+    cursor: pointer;
+}
+
+/* sign up section */
+.login{
+    font-size: 12px;
+    margin-top: 5px;
+    justify-content: center;
+
+}
+
+
+
+.login a{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login a:hover{
+    text-decoration: underline;
+    
+} 
+
+
+
+
